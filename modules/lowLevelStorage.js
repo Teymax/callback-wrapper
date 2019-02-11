@@ -10,7 +10,6 @@ let lowLewelStorage = {
   put (key, value, callback) {
     let error = null
     let message = this[key] === undefined ? `Field ${key} created & value is written` : `Value in field ${key} updated`
-    // if (this[key] === undefined) error = `Object don't have property ${key}`
     this[key] = value
     return callback(error, message)
   },
